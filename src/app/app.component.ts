@@ -31,7 +31,7 @@ export class AppComponent {
         datasets: [
           {
             label: 'values', //'# top_range',
-            data: [9, 14, null, 4, 1, 2, null, 7, 11, 6],
+            data: [9, 14, null, 4, 1, 2, undefined, 7, 11, 6],
             errorBars: {
               '08:00': {plus: 15, minus: 7},
               '09:00': {plus: 20, minus: 9},
@@ -49,8 +49,8 @@ export class AppComponent {
           },
           {
             label: '', //'# bottom_range',
-            data: [7, 13, 3, 1, 0, 2, 1, 3],
-            borderColor: 'rgba(0, 255, 0, 1)',
+            data: [7, 13, 3, 1, 0, 2, 1, 3, 5, 10],
+            borderColor: 'rgba(0, 255, 0, 0.8)',
             fill: false,
             pointRadius: 0,
             radius: 0
@@ -59,15 +59,16 @@ export class AppComponent {
           },
           {
             label: '', //'# top range',
-            data: [12, 19, 3, 5, 2, 3, 6, 8],
+            data: [12, 19, 3, 5, 2, 3, 6, 8, 16, 12],
             fill: '-1',
-            borderColor: 'rgba(255, 99, 132, 1)',
-            backgroundColor: 'rgba(0, 255, 0, 0.5)',
+            borderColor: 'rgba(0, 255, 0, 0.8)',
+            backgroundColor: 'rgba(0, 255, 0, 0.8)',
             pointRadius: 0,
             radius: 0,
             borderWidth: 1
         }]
       },
+
       options: {
         responsive: true,
         scales: {
@@ -76,6 +77,22 @@ export class AppComponent {
               beginAtZero: true
             },
           }],
+          xAxes: [{
+           // ticks: {
+           //   autoSkip: true,
+           //   maxTicksLimit: 3
+           //  }
+            ticks: {
+              // Include a dollar sign in the ticks
+              callback: function(value, index, values) {
+                if (value && value.length && value[0]=='0') {
+                  return '';
+                } else {
+                  return value;
+                }
+              }
+            }
+          }]
         },
         legend: {
           labels: {
@@ -111,7 +128,7 @@ export class AppComponent {
              * stroke color, or array of colors
              * @default: derived from borderColor
              */
-            color: 'green',
+            //color: 'green',
 
             /**
              * bar width in pixel as number or string or bar width in percent based on the barchart bars width (max 100%), or array of such definition
@@ -135,7 +152,8 @@ export class AppComponent {
 
       },
 
-      plugins: [chartJsPluginErrorBars,
+      kuku: chartJsPluginErrorBars,
+      plugins: [
                 {
                   // solution for dashed-line where there are missing points
                   // Based on: https://stackoverflow.com/questions/41600813/dashed-line-for-missing-data-in-chart-js-spangaps-style
@@ -183,3 +201,22 @@ export class AppComponent {
   }
 
 }
+
+/*
+ let gradient = (<any>this.chart).element.nativeElement.getContext('2d').createLinearGradient(0, 0, this.graphWidth-30, 0);
+ gradient.addColorStop(0, '#dddddd');
+ let actualColor = line.color;
+ if (isComplementaryLine) {
+ actualColor = this.getAverageColor(actualColor, '#777777'); //grayish
+ actualColor = this.getAverageColor(actualColor, '#777777'); //even more grayish
+ }
+
+ gradient.addColorStop(1, actualColor);
+
+ let lineChartColor: Color = {
+ backgroundColor: actualColor,
+ borderColor    : gradient
+ };
+
+ *** and can use the gradient as normal color fort the background (green range)
+ */
