@@ -137,6 +137,8 @@ export class AppComponent {
 
       plugins: [chartJsPluginErrorBars,
                 {
+                  // solution for dashed-line where there are missing points
+                  // Based on: https://stackoverflow.com/questions/41600813/dashed-line-for-missing-data-in-chart-js-spangaps-style
                   beforeDraw: chart => {
                     var ctx = chart.chart.ctx;
                     ctx.save();
