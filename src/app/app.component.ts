@@ -26,13 +26,12 @@ export class AppComponent {
   draw() {
     var myChart = new Chart(this.ctx, {
       type: 'line',
-      plugins: [chartJsPluginErrorBars],
       data: {
-        labels: ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00'],
+        labels: ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
         datasets: [
           {
             label: 'values', //'# top_range',
-            data: [9, 14, , 4, 1, 2],
+            data: [9, 14, null, 4, 1, 2, null, 7, 11, 6],
             errorBars: {
               '08:00': {plus: 15, minus: 7},
               '09:00': {plus: 20, minus: 9},
@@ -40,13 +39,17 @@ export class AppComponent {
               '11:00': {plus: 6, minus: 0},
               '12:00': {plus: 2, minus: 1},
               '13:00': {plus: 3.5, minus: 1},
+              //'14:00': {plus: 5.5, minus: 2.3},
+              '15:00': {plus: 9, minus: 6},
+              '16:00': {plus: 14, minus: 8},
+              '17:00': {plus: 9, minus: 4},
            },
             borderColor: 'rgba(111, 111, 255, 1)',
             fill: false
           },
           {
             label: '', //'# bottom_range',
-            data: [7, 13, 3, 1, 0, 2],
+            data: [7, 13, 3, 1, 0, 2, 1, 3],
             borderColor: 'rgba(0, 255, 0, 1)',
             fill: false,
             pointRadius: 0,
@@ -56,7 +59,7 @@ export class AppComponent {
           },
           {
             label: '', //'# top range',
-            data: [12, 19, 3, 5, 2, 3],
+            data: [12, 19, 3, 5, 2, 3, 6, 8],
             fill: '-1',
             borderColor: 'rgba(255, 99, 132, 1)',
             backgroundColor: 'rgba(0, 255, 0, 0.5)',
@@ -130,7 +133,50 @@ export class AppComponent {
         }
 
 
-      }
+      },
+
+      plugins: [chartJsPluginErrorBars,
+                {
+                  beforeDraw: chart => {
+                    var ctx = chart.chart.ctx;
+                    ctx.save();
+                    let xAxis = chart.scales['x-axis-0'];
+                    let yAxis = chart.scales['y-axis-0'];
+                    let dataset = chart.data.datasets[0];
+                    var valueFrom = null;
+                    var valueFromIndex = 0;
+                    var xFrom = null;
+                    let yFrom = null;
+                    ctx.strokeStyle = dataset.borderColor;
+                    dataset.data.forEach((value, index) => {
+                      if (value != null) {
+                        var x = xAxis.getPixelForTick(index);
+                        var y = yAxis.getPixelForValue(value);
+                        if (valueFrom != null) {
+                          ctx.lineWidth = dataset.borderWidth;
+                          if (index - valueFromIndex > 1) {
+                            ctx.setLineDash([5, 5]);
+                          } else {
+                            ctx.setLineDash([]);
+                          }
+                          ctx.beginPath();
+                          ctx.moveTo(xFrom, yFrom);
+                          if (index - valueFromIndex > 1) {
+                            ctx.lineTo(x, y);
+                          } else {
+                            ctx.moveTo(x, y);
+                          }
+                          ctx.stroke();
+                        }
+                        valueFrom = value;
+                        valueFromIndex = index;
+                        xFrom = x;
+                        yFrom = y;
+                      }
+                    });
+                    ctx.restore();
+                  }
+                }],
     });
   }
 
