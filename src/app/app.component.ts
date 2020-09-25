@@ -20,11 +20,15 @@ export class AppComponent {
 
   ngOnInit(): void {
     this.ctx = this.canvas.nativeElement.getContext('2d');
-    this.draw();
+
+
+
+
+    this.draw(this.canvas.nativeElement);
   }
 
-  draw() {
-    var myChart = new Chart(this.ctx, {
+  draw(nativeElement) {
+    var config = {
       type: 'line',
       data: {
         labels: ['08:00', '09:00', '10:00', '11:00', '12:00', '13:00', '14:00', '15:00', '16:00', '17:00'],
@@ -70,6 +74,12 @@ export class AppComponent {
       },
 
       options: {
+        onClick: function(value, index, values) {
+          console.log('value: ', value, ' index: ', index, 'values: ', values);
+          if (index && index.length) {
+            console.log(index[0]._index);
+          }
+        },
         responsive: true,
         scales: {
           yAxes: [{
@@ -197,7 +207,22 @@ export class AppComponent {
                     ctx.restore();
                   }
                 }],
-    });
+    };
+    var myChart = new Chart(this.ctx, config);
+
+    // nativeElement.onclick = function (evt) {
+    //   var activePoint = myChart.lastActive[0];
+    //   if (activePoint !== undefined) {
+    //     var datasetIndex = activePoint._datasetIndex;
+    //     var index = activePoint._index;
+    //     var datasetName = myChart.data.datasets[datasetIndex].label;
+    //     var title = myChart.data.labels[index];
+    //     var dataValue = myChart.data.datasets[datasetIndex].data[index];
+    //     alert("Dataset Name: [" + datasetName + "] title: [" + title + "] value: [" + dataValue + "]");
+    //     console.log('activePoint' , activePoint );
+    //
+    //   }
+    // };
   }
 
 }
