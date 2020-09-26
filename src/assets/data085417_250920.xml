@@ -1,0 +1,115 @@
+<chart caption='CPURate on CICD-VIEW [Jobname_CICSBELL]' subcaption='Between 2020-08-13 08:00:00 and 2020-09-25 08:59:00' xAxisName='Time' yAxisName='Average Sum' YAxisMaxValue='52.350279345512' YAxisMinValue='5.4177198266983' showLimits='1' chartRightMargin='65' showvalues='0' anchorRadius='2' showNames='1' showDivLineValue='1' anchorBgAlpha='0' connectNullData='1' numDivLines='8' adjustDiv='0' yAxisValueDecimals='3' decimals='3' palette='3'  ><categories  ><category label='2020-08-13
+00:26:10' showName='0'  /><category label='2020-08-13
+17:55:23' showName='1'  /><category label='2020-08-14
+11:24:35' showName='0'  /><category label='2020-08-15
+04:53:47' showName='0'  /><category label='2020-08-15
+22:23:00' showName='0'  /><category label='2020-08-16
+15:52:12' showName='0'  /><category label='2020-08-17
+09:21:24' showName='0'  /><category label='2020-08-18
+02:50:37' showName='0'  /><category label='2020-08-18
+20:19:49' showName='0'  /><category label='2020-08-19
+13:49:01' showName='0'  /><category label='2020-08-20
+07:18:14' showName='0'  /><category label='2020-08-21
+00:47:26' showName='0'  /><category label='2020-08-21
+18:16:38' showName='0'  /><category label='2020-08-22
+11:45:51' showName='1'  /><category label='2020-08-23
+05:15:03' showName='0'  /><category label='2020-08-23
+22:44:15' showName='0'  /><category label='2020-08-24
+16:13:28' showName='0'  /><category label='2020-08-25
+09:42:40' showName='0'  /><category label='2020-08-26
+03:11:52' showName='0'  /><category label='2020-08-26
+20:41:05' showName='0'  /><category label='2020-08-27
+14:10:17' showName='0'  /><category label='2020-08-28
+07:39:29' showName='0'  /><category label='2020-08-29
+01:08:42' showName='0'  /><category label='2020-08-29
+18:37:54' showName='0'  /><category label='2020-08-30
+12:07:06' showName='0'  /><category label='2020-08-31
+05:36:19' showName='1'  /><category label='2020-08-31
+23:05:31' showName='0'  /><category label='2020-09-01
+16:34:43' showName='0'  /><category label='2020-09-02
+10:03:56' showName='0'  /><category label='2020-09-03
+03:33:08' showName='0'  /><category label='2020-09-03
+21:02:21' showName='0'  /><category label='2020-09-04
+14:31:33' showName='0'  /><category label='2020-09-05
+08:00:45' showName='0'  /><category label='2020-09-06
+01:29:58' showName='0'  /><category label='2020-09-06
+18:59:10' showName='0'  /><category label='2020-09-07
+12:28:22' showName='0'  /><category label='2020-09-08
+05:57:35' showName='0'  /><category label='2020-09-08
+23:26:47' showName='1'  /><category label='2020-09-09
+16:55:59' showName='0'  /><category label='2020-09-10
+10:25:12' showName='0'  /><category label='2020-09-11
+03:54:24' showName='0'  /><category label='2020-09-11
+21:23:36' showName='0'  /><category label='2020-09-12
+14:52:49' showName='0'  /><category label='2020-09-13
+08:22:01' showName='0'  /><category label='2020-09-14
+01:51:13' showName='0'  /><category label='2020-09-14
+19:20:26' showName='0'  /><category label='2020-09-15
+12:49:38' showName='0'  /><category label='2020-09-16
+06:18:50' showName='0'  /><category label='2020-09-16
+23:48:03' showName='0'  /><category label='2020-09-17
+17:17:15' showName='1'  /><category label='2020-09-18
+10:46:27' showName='0'  /><category label='2020-09-19
+04:15:40' showName='0'  /><category label='2020-09-19
+21:44:52' showName='0'  /><category label='2020-09-20
+15:14:04' showName='0'  /><category label='2020-09-21
+08:43:17' showName='0'  /><category label='2020-09-22
+02:12:29' showName='0'  /><category label='2020-09-22
+19:41:41' showName='0'  /><category label='2020-09-23
+13:10:54' showName='0'  /><category label='2020-09-24
+06:40:06' showName='0'  /><category label='2020-09-25
+00:09:18' showName='0'  /></categories><dataset  seriesName='CPURate AVERAGE=29.0865 STDDEV=9.5501' renderAs='Line' parentYAxis='P' color='AFD8F8' alpha='100' anchorAlpha='100' lineThickness='2' anchorBorderColor='AFD8F8' anchorRadius='3' anchorBgColor='ffffff' anchorBgAlpha='100' topErrorBar='1' bottomErrorBar='1' errorbarwidth='25' errorbarthickness='1' errorbarcolor='AFD8F8' bottomErrorBarWidth='10' topErrorBarWidth='10'  ><set  value='31.0291' toolText='&lt;b&gt;CPURate&lt;/b&gt;
+&lt;u&gt;Value&lt;/u&gt;: 31.0291 
+&lt;u&gt;Start&lt;/u&gt;: 2020-08-13 00:26:10
+&lt;u&gt;End&lt;/u&gt;: 2020-08-13 17:55:23
+&lt;u&gt;Samples&lt;/u&gt;: 450
+&lt;u&gt;Min local spread&lt;/u&gt;: 10.626
+&lt;u&gt;Max local spread&lt;/u&gt;: 51.022
+&lt;u&gt;Std Dev&lt;/u&gt;: 9.8654
+
+&lt;p align=&apos;center&apos;&gt;[Click for drill down&lt;/p&gt;]' link='javascript:zoomin(1597267560.8305,1597330560.1695, [8], [44], 138, &apos;oneline&apos;, 0, 0, null, null)' bottomErrorValue='20.4031' topErrorValue='19.9929'  /><set  value='31.7559' toolText='&lt;b&gt;CPURate&lt;/b&gt;
+&lt;u&gt;Value&lt;/u&gt;: 31.7559 
+&lt;u&gt;Start&lt;/u&gt;: 2020-08-13 17:55:23
+&lt;u&gt;End&lt;/u&gt;: 2020-08-14 11:24:35
+&lt;u&gt;Samples&lt;/u&gt;: 403
+&lt;u&gt;Min local spread&lt;/u&gt;: 9.351
+&lt;u&gt;Max local spread&lt;/u&gt;: 50.059
+&lt;u&gt;Std Dev&lt;/u&gt;: 9.8769
+
+&lt;p align=&apos;center&apos;&gt;[Click for drill down&lt;/p&gt;]' link='javascript:zoomin(1597330500.1695,1597393500.5085, [8], [44], 138, &apos;oneline&apos;, 0, 0, null, null)' bottomErrorValue='22.4049' topErrorValue='18.3031'  /><set  value='22.8376' toolText='&lt;b&gt;CPURate&lt;/b&gt;
+&lt;u&gt;Value&lt;/u&gt;: 22.8376 
+&lt;u&gt;Start&lt;/u&gt;: 2020-08-14 11:24:35
+&lt;u&gt;End&lt;/u&gt;: 2020-08-15 04:53:47
+&lt;u&gt;Samples&lt;/u&gt;: 145
+&lt;u&gt;Min local spread&lt;/u&gt;: 6.746
+&lt;u&gt;Max local spread&lt;/u&gt;: 39.087
+&lt;u&gt;Std Dev&lt;/u&gt;: 6.5285
+
+&lt;p align=&apos;center&apos;&gt;[Click for drill down&lt;/p&gt;]' link='javascript:zoomin(1597393440.5085,1597456440.8475, [8], [44], 138, &apos;oneline&apos;, 0, 0, null, null)' dashed='1' bottomErrorValue='16.0916' topErrorValue='16.2494'  /><set    /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set  value='34.9948' toolText='&lt;b&gt;CPURate&lt;/b&gt;
+&lt;u&gt;Value&lt;/u&gt;: 34.9948 
+&lt;u&gt;Start&lt;/u&gt;: 2020-09-01 16:34:43
+&lt;u&gt;End&lt;/u&gt;: 2020-09-02 10:03:56
+&lt;u&gt;Samples&lt;/u&gt;: 17
+&lt;u&gt;Min local spread&lt;/u&gt;: 27.326
+&lt;u&gt;Max local spread&lt;/u&gt;: 46.02
+&lt;u&gt;Std Dev&lt;/u&gt;: 6.146
+
+&lt;p align=&apos;center&apos;&gt;[Click for drill down&lt;/p&gt;]' link='javascript:zoomin(1598967240.9831,1599030240.322, [8], [44], 138, &apos;oneline&apos;, 0, 0, null, null)' bottomErrorValue='7.6688' topErrorValue='11.0252'  /><set    /><set  value='25.0775' toolText='&lt;b&gt;CPURate&lt;/b&gt;
+&lt;u&gt;Value&lt;/u&gt;: 25.0775 
+&lt;u&gt;Start&lt;/u&gt;: 2020-09-03 03:33:08
+&lt;u&gt;End&lt;/u&gt;: 2020-09-03 21:02:21
+&lt;u&gt;Samples&lt;/u&gt;: 197
+&lt;u&gt;Min local spread&lt;/u&gt;: 9.521
+&lt;u&gt;Max local spread&lt;/u&gt;: 44.284
+&lt;u&gt;Std Dev&lt;/u&gt;: 7.5613
+
+&lt;p align=&apos;center&apos;&gt;[Click for drill down&lt;/p&gt;]' link='javascript:zoomin(1599093180.661,1599156180, [8], [44], 138, &apos;oneline&apos;, 0, 0, null, null)' dashed='1' bottomErrorValue='15.5565' topErrorValue='19.2065'  /><set    /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set   dashed='1'  /><set  value='25.0576' toolText='&lt;b&gt;CPURate&lt;/b&gt;
+&lt;u&gt;Value&lt;/u&gt;: 25.0576 
+&lt;u&gt;Start&lt;/u&gt;: 2020-09-25 00:09:18
+&lt;u&gt;End&lt;/u&gt;: 2020-09-25 17:38:31
+&lt;u&gt;Samples&lt;/u&gt;: 88
+&lt;u&gt;Min local spread&lt;/u&gt;: 13.819
+&lt;u&gt;Max local spread&lt;/u&gt;: 34.905
+&lt;u&gt;Std Dev&lt;/u&gt;: 5.0196
+
+&lt;p align=&apos;center&apos;&gt;[Click for drill down&lt;/p&gt;]' link='javascript:zoomin(1600981740.8305,1601044740.1695, [8], [44], 138, &apos;oneline&apos;, 0, 0, null, null)' bottomErrorValue='11.2386' topErrorValue='9.8474'  /></dataset><dataset  seriesName='Historic Thresholds' renderAs='Area' parentYAxis='P' color='2db300' showPlotBorder='0' alpha='80' drawAnchors='0' plotGradientColor='&apos;&apos;'  ><set  value='51.021999359131' lValue='10.236000061035' toolText=''  /><set  value='50.05899810791' lValue='9.3509998321533' toolText=''  /><set  value='39.0870018005371' lValue='6.74599981307983' toolText=''  /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set  value='46.555199432373' lValue='21.549799728394' toolText=''  /><set    /><set  value='44.2840003967285' lValue='9.52099990844727' toolText=''  /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set  value='33.6520004272461' lValue='13.8190002441406' toolText=''  /></dataset><dataset  seriesName='Historic Average' renderAs='Line' parentYAxis='P' color='FAFAD2' alpha='50' lineThickness='2' dashed='1' lineDashLen='5' lineDashGap='5' drawAnchors='0'  ><set  value='30.923783409119' toolText=''  /><set  value='31.903542457798' toolText=''  /><set  value='22.469630491323' toolText=''  /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set  value='33.896590614319' toolText=''  /><set    /><set  value='26.057961609158' toolText=''  /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set    /><set  value='23.271200180054' toolText=''  /></dataset><trendLines><line startValue='29.086481538462' color='9B30FF' thickness='1' isTrendZone='0' valueOnRight='1'  /></trendLines><styles><definition><style name='MyFirstFontStyle' type='font' isHTML='1'  /></definition><application><apply toObject='TOOLTIP' styles='MyFirstFontStyle'  /></application></styles></chart>
