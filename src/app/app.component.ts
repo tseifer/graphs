@@ -76,6 +76,9 @@ export class AppComponent {
       },
 
       options: {
+        animation: {
+          duration: 0
+        },
         onClick: function(value, index, values) {
           console.log('value: ', value, ' index: ', index, 'values: ', values);
           if (index && index.length) {
