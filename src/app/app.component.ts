@@ -52,7 +52,7 @@ export class AppComponent {
           },
           {
             label: '', //'# bottom_range',
-            ignoreEmptyValues: 1,
+            ignoreEmptyValues: 1, // don't add dashed-lines where values are missing
             data: [7, 13, 3, 1, 0, 2, 1, , 5, 10],
             borderColor: 'rgba(0, 255, 0, 0.8)',
             fill: false,
@@ -63,7 +63,7 @@ export class AppComponent {
           },
           {
             label: '', //'# top range',
-            ignoreEmptyValues: 1,
+            ignoreEmptyValues: 1, // don't add dashed-lines where values are missing
             data: [12, 19, 3, 5, 2, 3, 6, , 16, 12],
             fill: '-1',
             borderColor: 'rgba(0, 255, 0, 0.8)',
@@ -149,7 +149,7 @@ export class AppComponent {
              * bar width in pixel as number or string or bar width in percent based on the barchart bars width (max 100%), or array of such definition
              * @default 10
              */
-            width: 20 ,
+            width: 10 ,
 
             /**
              * lineWidth as number, or as string with pixel (px) ending
@@ -172,11 +172,13 @@ export class AppComponent {
                 {
                   // solution for dashed-line where there are missing points
                   // Based on: https://stackoverflow.com/questions/41600813/dashed-line-for-missing-data-in-chart-js-spangaps-style
+                  // Drawing dashed-lines where values are missing
                   afterDraw: chart => {
                     var ctx = chart.chart.ctx;
                     ctx.save();
-                    let xAxis = chart.scales['x-axis-0'];
-                    let yAxis = chart.scales['y-axis-0'];
+                    var xAxis = chart.scales['x-axis-0'];
+                    var yAxis = chart.scales['y-axis-0'];
+                    ctx.setLineDash([7, 3]);
 
                     for (var dataset of chart.data.datasets) {
                       if (dataset.ignoreEmptyValues) {
@@ -185,27 +187,20 @@ export class AppComponent {
                       var valueFrom = null;
                       var valueFromIndex = 0;
                       var xFrom = null;
-                      let yFrom = null;
+                      var yFrom = null;
                       ctx.strokeStyle = dataset.borderColor;
+                      ctx.lineWidth = dataset.borderWidth;
                       dataset.data.forEach((value, index) => {
                         if (value != null) {
                           var x = xAxis.getPixelForTick(index);
                           var y = yAxis.getPixelForValue(value);
                           if (valueFrom != null) {
-                            ctx.lineWidth = dataset.borderWidth;
                             if (index - valueFromIndex > 1) {
-                              ctx.setLineDash([7, 3]);
-                            } else {
-                              ctx.setLineDash([]);
-                            }
-                            ctx.beginPath();
-                            ctx.moveTo(xFrom, yFrom);
-                            if (index - valueFromIndex > 1) {
+                              ctx.beginPath();
+                              ctx.moveTo(xFrom, yFrom);
                               ctx.lineTo(x, y);
-                            } else {
-                              ctx.moveTo(x, y);
+                              ctx.stroke();
                             }
-                            ctx.stroke();
                           }
                           valueFrom = value;
                           valueFromIndex = index;
@@ -213,11 +208,12 @@ export class AppComponent {
                           yFrom = y;
                         }
                       });
-                      ctx.restore();
                     }
+                    ctx.restore();
                   }
                 }],
     };
+
     var myChart = new Chart(this.ctx, config);
 
     // nativeElement.onclick = function (evt) {
